@@ -1,0 +1,5 @@
+@import "../helpers/mixins/font-face";
+
+@include font-face("TTHoves", "../../fonts/TTHovesLight/TTHoves-Light", 300);
+@include font-face("TTHoves", "../../fonts/TTHovesMedium/TTHoves-Medium", 500);
+@include font-face("TTHoves", "../../fonts/TTHovesDemiBold/TTHoves-DemiBold", 600);

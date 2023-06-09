@@ -1,0 +1,64 @@
+.gameplan {
+    position: relative;
+    &__inner-block {
+        margin-top: 80px;
+        position: relative;
+        @include laptop {
+            margin-top:50px;
+        }
+        @include mobile {
+            margin-top: 52px;
+        }
+    }
+    // left-side line with arrow
+    &__arrow {
+        width: calc((100vw - 1300px) / 2);
+        background-color: $dark;
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 477px;
+        left: 0;
+        @include laptop {
+            display: none;
+        }
+        &:before {
+            width: 8px;
+            transform-origin: top right;
+            transform: rotate(40deg);
+            background-color: $dark;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &:after {
+            width: 8px;
+            transform-origin: bottom right;
+            transform: rotate(-40deg);
+            background-color: $dark;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    // right-side line
+    &:before {
+        content: ' ';
+        position: absolute;
+        top: 200px;
+        right: 0;
+        display: block;
+        width: calc((100vw - 1200px) / 2);
+        height: 1px;
+        background: $dark;
+        @include laptop {
+            display: none;
+        }
+    }
+}
